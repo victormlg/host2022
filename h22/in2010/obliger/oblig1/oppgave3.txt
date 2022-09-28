@@ -1,0 +1,14 @@
+Procedure find(v, x) 
+    if v.element = x then
+        return parent_list(v, [])
+    for i in v.children do
+        n <- find(v, x)
+        if n != None then
+            return n
+
+
+Procedure parent_list(v, l) 
+    append v to l
+    if v.parent = null then
+        return l 
+    return parent_list(v.parent, l)

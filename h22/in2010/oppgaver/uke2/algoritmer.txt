@@ -1,0 +1,11 @@
+Algoritmer uke2 :
+
+Trær :
+    dybde, høyde, preorder, postorder
+
+    Binærtrær :
+        insert, search, finn_minste, remove
+
+        AVL-trær :
+            venstre_rotasjon, høyre_rotasjon, balance_faktor, balance
+            

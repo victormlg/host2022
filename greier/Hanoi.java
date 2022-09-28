@@ -1,0 +1,6 @@
+class Hanoi {
+    Hanoi() {
+
+    }
+    
+}

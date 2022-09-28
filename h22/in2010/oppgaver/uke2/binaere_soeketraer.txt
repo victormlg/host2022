@@ -1,0 +1,31 @@
+(a)
+
+Procedure finn_minste(v) 
+    if v.left = null then
+        return v
+    return finn_minste(v.left)
+
+(b)
+
+Procedure finn_største(v) 
+    if v.right = null then
+        return v
+    return finn_største(v.right)
+
+(c) 
+
+Procedure korteste_sti(v) 
+    h <- -1
+    if v = null then
+        return h 
+    for v' ∈ v.children do
+        h <- Min(h, height(v'))
+
+(d) lengste stien = høyden på treet
+
+Procedure lengste_sti(v)   
+    h <- -1
+    if v = null then
+        return h 
+    for v' ∈ v.children do
+        h <- Max(h, height(v'))

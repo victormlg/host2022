@@ -1,0 +1,95 @@
+Oppgave 2 :
+a)
+k er lengden på pythoon-listen
+
+Procedure push_back(A, x)
+    append x to A
+
+Procedure push_front(A, x)
+    i <- 0
+    append A[k-1] to A
+    while i < k do
+        A[k-i] <- A[k-i-1]
+        i+=1
+    A[0] <- x
+
+Procedure push_middle(A, x)
+    mid <- ⌊(k+1)/2⌋
+    i <- 0
+    append A[k-1] to A
+    while i < mid do
+        A[k-i] <- A[k-i-1]
+        t+=1
+    A[mid] <- x
+
+Procedure get(A, i)
+    return A[i]
+
+c)
+push_back : O(1)
+push_front : O(n)
+push_middle : O(n) men tar dobbelt så kort tid som push_front
+get : O(1)
+
+
+d)
+Hvis N er begrenset så er kjøretidskompleksiteten lik O(N). Siden 
+N er en konstant blir kjøretidskompleksiteten til O(1).
+
+Oppgave 3 :
+
+Procedure find(v, x) 
+    if v.element = x then
+        return parent_list(v, [])
+    for i in v.children do
+        n <- find(v, x)
+        if n != None then
+            return n
+
+
+Procedure parent_list(v, l) 
+    append v to l
+    if v.parent = null then
+        return l 
+    return parent_list(v.parent, l)
+
+Oppgave 4 :
+
+a)
+
+Procedure balansert_input(l1, l2)
+    n <- |l1|
+
+    if n = 1 then
+        Append l1[0] to l2
+        return l2
+
+    mid <- ⌊n/2⌋
+
+    Append l1[mid] to l2
+    if n > 2 then
+        balansert_input(l1[mid+1:], l2)
+    balansert_input(l1[:mid], l2)
+
+    return l2
+
+b)
+
+Procedure print_heapbalansert_input(h)
+    n <- |h|
+
+    if n = 1 then
+        print(h.pop())
+        return 
+
+    mid <- ⌊n/2⌋
+    pop <- -1
+    newh <- []
+    while pop < mid-1 do 
+        pop <- h.pop()
+        newh.push(pop)
+    print(h.pop())
+
+    print_heapbalansert_input(newh)
+    if h :
+        print_heapbalansert_input(h)

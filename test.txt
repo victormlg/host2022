@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/11548093/my-bash-aliases-dont-work

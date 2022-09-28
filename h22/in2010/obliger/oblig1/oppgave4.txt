@@ -1,0 +1,38 @@
+a)
+
+Procedure balansert_input(l1, l2)
+    n <- |l1|
+
+    if n = 1 then
+        Append l1[0] to l2
+        return l2
+
+    mid <- ⌊n/2⌋
+
+    Append l1[mid] to l2
+    if n > 2 then
+        balansert_input(l1[mid+1:], l2)
+    balansert_input(l1[:mid], l2)
+
+    return l2
+
+b)
+
+Procedure print_heapbalansert_input(h)
+    n <- |h|
+
+    if n = 1 then
+        print(h.pop())
+        return 
+
+    mid <- ⌊n/2⌋
+    pop <- -1
+    newh <- []
+    while pop < mid-1 do 
+        pop <- h.pop()
+        newh.push(pop)
+    print(h.pop())
+
+    print_heapbalansert_input(newh)
+    if h :
+        print_heapbalansert_input(h)
